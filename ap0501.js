@@ -101,7 +101,7 @@ function init() {
   const vender02Material = new THREE.MeshPhongMaterial({ map: venderTexture02 });
   // 自動販売機1号
   const vender01 = new THREE.Mesh(
-    new THREE.BoxGeometry(1.2, 3.6, 0.9),
+    new THREE.BoxGeometry(1.2, 1.8, 0.9),
     [
       // 面ごとの素材の設定
       venderMaterial, // 左
@@ -117,12 +117,13 @@ function init() {
   vender01.receiveShadow = true;
   // 自販機1の位置の設定
   vender01.position.x = -0.6;
+  vender01.position.y = 0.9;
   // 自販機1をシーンに追加する
   scene.add(vender01);
 
   // 自動販売機2号
   const vender02 = new THREE.Mesh(
-    new THREE.BoxGeometry(1.0, 3.6, 0.9),
+    new THREE.BoxGeometry(1.0, 1.8, 0.9),
 
     // 面ごとの素材の設定
     [
@@ -140,6 +141,7 @@ function init() {
   vender02.receiveShadow = true;
   // 自販機2の位置の設定
   vender02.position.x = 0.5;
+  vender02.position.y = 0.9;
   // 自販機2をシーンに追加する
   scene.add(vender02);
 
